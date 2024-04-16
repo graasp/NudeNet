@@ -28,6 +28,7 @@ __labels = [
 
 
 def _read_image(image_path, target_size=320):
+    
     if isinstance(image_path, str):
         img = cv2.imread(image_path)
     elif isinstance(image_path, np.ndarray):
