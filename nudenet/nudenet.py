@@ -28,7 +28,13 @@ __labels = [
 
 
 def _read_image(image_path, target_size=320):
-    img = cv2.imread(image_path)
+    if isinstance(image_path, str):
+        img = cv2.imread(image_path)
+    elif isinstance(img, np.ndarray):
+        img = image_path
+    else:
+        raise ValueError('please make sure the image_path is str or np.ndarray')
+
     img_height, img_width = img.shape[:2]
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
