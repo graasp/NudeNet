@@ -30,7 +30,7 @@ __labels = [
 def _read_image(image_path, target_size=320):
     if isinstance(image_path, str):
         img = cv2.imread(image_path)
-    elif isinstance(img, np.ndarray):
+    elif isinstance(image_path, np.ndarray):
         img = image_path
     else:
         raise ValueError('please make sure the image_path is str or np.ndarray')
