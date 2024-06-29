@@ -105,7 +105,7 @@ setup(
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     package_data={
-        'nudenet': ['nudenet/best.onnx'],   # '': ['*'] means all dirs
+        'nudenet': ['nudenet/320n.onnx'],   # '': ['*'] means all dirs
     },
     include_package_data=True,
     license="MIT",

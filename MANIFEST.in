@@ -1,1 +1,1 @@
-include nudenet/best.onnx
+include nudenet/320n.onnx
