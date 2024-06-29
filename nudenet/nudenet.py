@@ -116,9 +116,9 @@ def _postprocess(output, resize_factor, pad_left, pad_top):
 
 
 class NudeDetector:
-    def __init__(self, providers=None):
+    def __init__(self, model_path=None, providers=None):
         self.onnx_session = onnxruntime.InferenceSession(
-            os.path.join(os.path.dirname(__file__), "best.onnx"),
+            os.path.join(os.path.dirname(__file__), "320n.onnx") if not model_path else model_path,
             providers=C.get_available_providers() if not providers else providers,
         )
         model_inputs = self.onnx_session.get_inputs()
