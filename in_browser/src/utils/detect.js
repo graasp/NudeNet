@@ -60,6 +60,8 @@ export const detectImage = async (
     }); // update boxes to draw later
   }
 
+  console.log(boxes); // log boxes
+
   renderBoxes(canvas, boxes); // Draw boxes
   input.delete(); // delete unused Mat
 };
