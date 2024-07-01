@@ -23,7 +23,7 @@ detector.detect_batch(['image_1.jpg', 'image_2.jpg']) # Returns list of [list of
 | Model | resolution trained | based on | onnx link | pytorch link |
 | --- | --- | --- | --- | -- |
 | 320n | 320x320 | ultralytics yolov8n | [link](https://github.com/notAI-tech/NudeNet/releases/download/v3.4-weights/320n.onnx) | [link](https://github.com/notAI-tech/NudeNet/releases/download/v3.4-weights/320n.pt)
-| 640m | 640x640 | ultralytics yolov5m | [link](https://github.com/notAI-tech/NudeNet/releases/download/v3.4-weights/640m.onnx) | [link](https://github.com/notAI-tech/NudeNet/releases/download/v3.4-weights/640m.pt)
+| 640m | 640x640 | ultralytics yolov8m | [link](https://github.com/notAI-tech/NudeNet/releases/download/v3.4-weights/640m.onnx) | [link](https://github.com/notAI-tech/NudeNet/releases/download/v3.4-weights/640m.pt)
 
 ```python
 # To use the 640m model, download the onnx file and pass the path to the model_path argument
