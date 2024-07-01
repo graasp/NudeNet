@@ -8,9 +8,28 @@ pip install --upgrade nudenet
 
 ```python
 from nudenet import NudeDetector
-nude_detector = NudeDetector()
-nude_detector.detect('image.jpg') # Returns list of detections
+detector = NudeDetector()
+# the 320n model included with the package will be used
+
+detector.detect('image.jpg') # Returns list of detections
+detector.detect_batch(['image_1.jpg', 'image_2.jpg']) # Returns list of [list of detections]
 ```
+
+- Available models
+
+| Model | resolution trained | based on | onnx link | pytorch link |
+| --- | --- | --- | --- | -- |
+| 320n | 320x320 | ultralytics yolov8n | [link](https://github.com/notAI-tech/NudeNet/releases/download/v3.4-weights/320n.onnx) | [link](https://github.com/notAI-tech/NudeNet/releases/download/v3.4-weights/320n.pt)
+| 640m | 640x640 | ultralytics yolov5m | [link](https://github.com/notAI-tech/NudeNet/releases/download/v3.4-weights/640m.onnx) | [link](https://github.com/notAI-tech/NudeNet/releases/download/v3.4-weights/640m.pt)
+
+```python
+# To use the 640m model, download the onnx file and pass the path to the model_path argument
+
+detector = NudeDetector(model_path="downloaded_640m.onnx path", inference_resolution=640)
+```
+
+- 320n is the default model and is included in the `nudenet` python package by default
+
 
 ```python
 detection_example = [
