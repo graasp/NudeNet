@@ -137,7 +137,7 @@ def _postprocess(
 
 
 class NudeDetector:
-    def __init__(self, model_path=None, providers=None):
+    def __init__(self, model_path=None, providers=None, inference_resolution=320):
         self.onnx_session = onnxruntime.InferenceSession(
             os.path.join(os.path.dirname(__file__), "320n.onnx")
             if not model_path
@@ -146,8 +146,8 @@ class NudeDetector:
         )
         model_inputs = self.onnx_session.get_inputs()
 
-        self.input_width = 320
-        self.input_height = 320
+        self.input_width = inference_resolution
+        self.input_height = inference_resolution
         self.input_name = model_inputs[0].name
 
     def detect(self, image_path):
