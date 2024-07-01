@@ -3,7 +3,7 @@
 https://nudenet.notai.tech/ in-browser demo (the detector is run client side, i.e: in your browser, images are not sent to a server)
 
 ```bash
-pip install --upgrade nudenet
+pip install --upgrade nudenet>=3.4.1
 ```
 
 ```python
@@ -12,10 +12,13 @@ detector = NudeDetector()
 # the 320n model included with the package will be used
 
 detector.detect('image.jpg') # Returns list of detections
+
 detector.detect_batch(['image_1.jpg', 'image_2.jpg']) # Returns list of [list of detections]
 ```
 
-- Available models
+- `detect` and `detect_batch` accept file path(s), opencv image(s), image bytes(s), open(image_path, 'rb') (buffereader) objects
+
+#### Available models
 
 | Model | resolution trained | based on | onnx link | pytorch link |
 | --- | --- | --- | --- | -- |

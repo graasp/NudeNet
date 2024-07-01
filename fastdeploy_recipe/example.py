@@ -1,1 +1,1 @@
-example = ['cory_chase.jpeg']
+example = [open('cory_chase.jpeg', 'rb')]

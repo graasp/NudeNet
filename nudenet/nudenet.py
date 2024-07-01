@@ -1,4 +1,5 @@
 import os
+import _io
 import math
 import cv2
 import numpy as np
@@ -32,8 +33,14 @@ def _read_image(image_path, target_size=320):
         mat = cv2.imread(image_path)
     elif isinstance(image_path, np.ndarray):
         mat = image_path
+    elif isinstance(image_path, bytes):
+        mat = cv2.imdecode(np.frombuffer(image_path, np.uint8), -1)
+    elif isinstance(image_path, _io.BufferedReader):
+        mat = cv2.imdecode(np.frombuffer(image_path.read(), np.uint8), -1)
     else:
-        raise ValueError("please make sure the image_path is str or np.ndarray")
+        raise ValueError(
+            "please make sure the image_path is str or np.ndarray or bytes"
+        )
 
     image_original_width, image_original_height = mat.shape[1], mat.shape[0]
 

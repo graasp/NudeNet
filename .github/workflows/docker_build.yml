@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'fastdeploy_recipe/requirements.txt'
+  workflow_dispatch:
 
 jobs:
   build:
