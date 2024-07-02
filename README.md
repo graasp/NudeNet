@@ -20,6 +20,8 @@ detector.detect('image.jpg') # Returns list of detections
 detector.detect_batch(['image_1.jpg', 'image_2.jpg']) # Returns list of [list of detections]
 ```
 
+- [Python package example in colab](https://colab.research.google.com/drive/1WChIMZ9Yzseije3Oj-Ye-cGCMLw8azvZ?usp=sharing)
+
 - `detect` and `detect_batch` accept file path(s), opencv image(s), image bytes(s), open(image_path, 'rb') (buffereader) objects
 
 #### Available models
