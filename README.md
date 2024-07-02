@@ -1,3 +1,7 @@
+**Looking for contributors/ maintainers for this repo**: 
+I have become busy with office related stuff in the last years, still trying to maintain this repo as it is the current best OSS option for nudity detection,
+Looking for interested mainttainer, who can add/ work on more features for this repo (with my help of course)
+
 # NudeNet: lightweight Nudity detection
 
 https://nudenet.notai.tech/ in-browser demo (the detector is run client side, i.e: in your browser, images are not sent to a server)
