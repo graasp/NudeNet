@@ -12,7 +12,7 @@ URL = "https://github.com/notAI-tech/nudenet"
 EMAIL = "praneeth@bpraneeth.com"
 AUTHOR = "BEDAPUDI PRANEETH"
 REQUIRES_PYTHON = ">=3.6.0"
-VERSION = "3.4.1"
+VERSION = "3.4.2"
 
 # What packages are required for this module to be executed?
 REQUIRED = [

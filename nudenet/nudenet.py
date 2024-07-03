@@ -111,7 +111,7 @@ def _postprocess(
 
             # Remove padding
             x = x
-            y = y - y_pad / 2
+            y = y
 
             # Clip coordinates to image boundaries
             x = max(0, min(x, image_original_width))

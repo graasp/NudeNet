@@ -7,7 +7,7 @@ Looking for interested mainttainer, who can add/ work on more features for this 
 https://nudenet.notai.tech/ in-browser demo (the detector is run client side, i.e: in your browser, images are not sent to a server)
 
 ```bash
-pip install --upgrade nudenet>=3.4.1
+pip install --upgrade "nudenet>=3.4.2"
 ```
 
 ```python
